@@ -1,0 +1,30 @@
+Part 1:
+
+The goal is to extract valid multiplication (mul(X,Y)) instructions from the corrupted memory string, compute the product for each valid instruction, and sum all the results.
+
+mul(2,4) → Valid
+mul(6,9) → Valid
+mul[3,7] → Invalid (wrong brackets)
+mul(4*) → Invalid (contains extra *)
+
+Solution:
+- Extract potential mul(X,Y) patterns: Use pattern matching (like regex) to find all substrings that resemble mul(X,Y).
+- Check that X and Y are valid integers.
+- Compute and sum results: Multiply X and Y for valid matches and accumulate the results.
+
+What is Regex (Regular Expression)?
+Regex is like a search pattern. It allows you to find text that matches a certain structure, rather than exact words. Think of it as a filter that only catches what you're looking for.
+
+Part 2: 
+
+Key Changes for Part Two:
+do(): Enables mul instructions after it.
+don't(): Disables mul instructions after it.
+Start with mul instructions enabled: At the beginning, all mul instructions are enabled.
+
+Step-by-Step Plan:
+- Track the state of whether mul instructions are enabled or disabled.
+- Process the instructions:
+    When we encounter do(), we set the mul instructions to enabled.
+    When we encounter don't(), we set the mul instructions to disabled.
+    Only sum the results of mul instructions when they are enabled.
