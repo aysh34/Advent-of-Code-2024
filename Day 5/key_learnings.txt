@@ -1,0 +1,27 @@
+Day 5
+
+PART 1_____
+1) You are given some rules that tell how the pages should appear in an update like 12|45 
+    - It means page 12 must appear before 45
+
+2) You are given some updates(i.e list of pages) like [74,23,45,12,43,66]
+
+What to do:
+
+1. Check if the pages in each update follow the rules (wether an update is valid or not).
+2. Find the middle page of all valid updates.
+3. Add the middle pages from all valid updates.
+
+How to check an update:
+- First of all, check wether both pages in each rule are present in update. 
+- If present:
+        First page must appear before than the second one
+- If not present:
+        Ignore that rule
+
+PART 2_____
+
+For the incorrect updates:
+1. Fix the page order using the rules.
+2. Find the middle page in the fixed update.
+3. Add the middle pages together to get the final answer.
