@@ -1,0 +1,30 @@
+- There are many claw machines.
+- There are two buttons A and B.
+- Each button moves the claw by specific amount on x axis and y axis.
+- pushing these buttons cost tokens (3 for A and 1 for B).
+- No button is pressed more than 100 times.
+
+What to do???
+
+- To win the prize align the claw exactly above prize on X and y axis.
+- Spend the fewest tokens to win all possible prizes.
+
+For example:
+Button A: X+94, Y+34
+Button B: X+22, Y+67
+Prize: X=8400, Y=5400
+
+When pressed, button A moves the claw 94 units on x axis and 34 on y axis.
+When pressed, button B moves the claw 22 units on x axis and 67 on y axis.
+The prize is located at (X=8400, Y=5400)
+
+Goal:
+How many times to press Button A (a) and Button B (b) such that:
+The claw moves exactly 8400 units on the X-axis:
+94a+22b=8400
+The claw moves exactly 5400 units on the Y-axis:
+34a+67b=5400
+
+The combination of a and b that achieves this with the minimum cost:
+
+Cost=3a+1b
